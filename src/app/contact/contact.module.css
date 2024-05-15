@@ -1,0 +1,78 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  margin-bottom: 12rem;
+}
+
+.imgContainer {
+  flex: 1;
+  height: 500px;
+  position: relative;
+}
+
+.title {
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+  font-size: xx-large;
+  font-family: var(--font-title);
+}
+
+.text {
+  margin-bottom: 8rem;
+  font-family: var(--font-subtitle);
+}
+
+.text h5 {
+  font-size: large;
+  margin-bottom: 10px;
+  font-family: var(--font-family);
+}
+
+.img {
+  object-fit: contain;
+}
+
+.formContainer {
+  flex: 1;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form input,
+.form textarea {
+  padding: 20px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background-color: rgb(231, 231, 231);
+  color: var(--text);
+  font-family: var(--font-family);
+}
+
+.form button {
+  padding: 20px;
+  background-color: transparent;
+  color: black;
+  font-weight: medium;
+  border: 2px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: var(--font-family);
+  transition-duration: 0.4s;
+}
+
+.form button:hover {
+  background-color: black;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}

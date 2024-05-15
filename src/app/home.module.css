@@ -1,0 +1,134 @@
+.container {
+    display: flex;
+    gap: 100px;
+    margin-bottom: 10rem;
+    margin-top: 2rem;
+}
+
+.textContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.title {
+    font-size: 80px;
+    font-family: var(--font-title);
+}
+
+.desc {
+    font-size: 18px;
+    font-family: var(--font-family);
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.button {
+    padding: 17px;
+    min-width: 120px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-family: var(--font-family);
+    font-weight: bold;
+    transition: 0.2s ease-in-out;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.button:hover {
+    background-color: #000;
+    color: antiquewhite;
+}
+
+.button:first-child:hover {
+    background-color: #000;
+    color: antiquewhite;
+}
+
+.button:first-child {
+    background-color: transparent;
+    border-color: #000;
+    border-style: solid;
+    border-width: 1px;
+    color: var(--text);
+}
+
+.brands {
+    /* width: 762px; */
+    height: 75px;
+    position: relative;
+    filter: grayscale(1);
+}
+
+.imgContainer {
+    flex: 1;
+    position: relative;
+}
+
+@media (max-width: 1024px) {
+    .container {
+      flex-direction: column;
+      text-align: center;
+    }
+    .brands {
+        width: 792px;
+        height: 100px;
+        /* justify-content: center; */
+        /* display: grid;
+        place-items: center; */
+        filter: grayscale(1);
+        margin: 0 auto;
+    }
+    .buttons{
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .title {
+      font-size: 64px;
+    }
+    .brands {
+        /* width: 96px; */
+        height: 70px;
+    }
+    .brands{
+      width: 100%;
+    }
+  }
+  @media (max-width: 640px) {
+    .title {
+      font-size: 64px;
+    }
+    .brands {
+        /* width: 96px; */
+        height: 53px;
+    }
+    .brands{
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 375px) {
+    .title {
+      font-size: 40px;
+    }
+    .desc {
+        font-size: 15px;
+    }
+    .button {
+        padding: 13px;
+        min-width: 20px;
+        cursor: pointer;
+        border: none;
+        border-radius: 7px;
+    }
+    .brands{
+      width: 100%;
+    }
+  }

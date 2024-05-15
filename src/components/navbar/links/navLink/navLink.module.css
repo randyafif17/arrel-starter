@@ -1,0 +1,25 @@
+.container {
+    min-width: 100px;
+    padding: 10px;
+    /* border-radius: 15px; */
+    font-weight: 500;
+    text-align: center;
+    font-family: var(--font-subtitle);
+}
+
+.active {
+    /* background-color: var(--text);
+    color: var(--bg); */
+    border-bottom: 0.2rem solid #000;
+}
+
+.container:hover { /* Add hover styles here */
+    /* border-bottom: 2px solid #000; 
+    transition: border-bottom 0.1s ease-in-out; */
+    text-decoration: none;
+
+    /* Add a solid underline with no box-shadow */
+    /* box-shadow: inset 0 -1px 0 #000;  */
+    border-bottom: 0.2rem solid #000;
+    transition: border-bottom 0.2s linear;
+}

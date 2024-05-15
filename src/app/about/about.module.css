@@ -1,0 +1,259 @@
+.container {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    margin: 9rem 0 25rem 0;
+}
+
+.header_content h1 {
+    font-family: var(--font-title);
+    font-size: 50px;
+}
+.header_content p {
+    margin-top: 1rem;
+    font-family: var(--font-subtitle);
+    font-size: 18px;
+}
+.team_information {
+    flex-direction: column;
+    margin-top: 5rem;
+}
+
+.team_information h1 {
+    font-family: var(--font-title);
+    font-weight: 500;
+    font-size: 33px;
+    line-height: 75px;
+    letter-spacing: -0.04em;
+    color: #000;
+}
+.team_information p {
+    font-family: var(--font-title);
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 20px;
+    color: #000;
+    text-align: flex-start;
+}
+.span {
+    font-size: 30px;
+}
+
+
+
+
+
+
+.header_department_input {
+    width: 100%;
+    margin: 2rem 0 1rem;
+
+    display: flex;
+    flex-direction: center;
+    justify-content: center;
+}
+
+/* .header_department_input button {
+    min-width: 10rem;
+    min-height: 45px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 20px;
+    background: #042c54;
+    /* border: 2px solid #FF4820; */
+    /* border: none;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+
+    transition-duration: 0.3s;
+
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+} */
+
+/* .header_department_input button:hover {
+    background-color: #084f96;
+} */
+
+.header_content_people {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+
+    gap: 90px;
+    margin-top: 2rem;
+}
+
+
+
+.header_content_people p {
+    margin-top: 0;
+    font-weight: 4000;
+    color: #000;
+}
+
+.header_content_people h2 {
+    font-size: 200px;
+    font-family: var(--font-title);
+    color: #000;
+}
+
+.myTeam {
+    margin-bottom: 25rem;
+    background-color: #fff;
+    margin: 9rem 25rem 25rem 0;
+    width: 100%;
+}
+
+.myTeam h1 {
+    font-family: var(--font-title);
+}
+
+.person {
+    margin-bottom: 0;
+    padding: 2rem 1rem 8px 2rem;
+    box-shadow: 0 0 0 1px var(--black-20);
+    font-weight: 300;
+    letter-spacing: 6px;
+}
+
+.person h3 {
+    font-family: var(--font-title);
+    margin-bottom: 10rem;
+    font-size: 3.7rem;
+}
+
+.person h5 {
+    letter-spacing: 5px;
+}
+
+.person li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+    unicode-bidi: isolate;
+}
+
+.people {
+    margin-top: 4.2rem;
+    display: grid;
+    overflow: hidden;
+    gap: 1px;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: var(--border);
+    list-style: none;
+    text-align: left;
+}
+
+.people ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    unicode-bidi: isolate;
+}
+
+/* .jabatan {
+    margin-top: 10rem;
+    font-family: var(--font-subtitle);
+    font-weight: 500;
+    font-size: large;
+} */
+
+.faded {
+    font-family: var(--font-subtitle);
+    color: var(--black-20);
+    opacity: 1;
+    transition: opacity var(--duration-normal);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+@media screen and (max-width: 1050px) {
+    .header_department {
+        flex-direction: column;
+    }
+
+    .header_content_department {
+        margin: 0 0 3rem;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .header_content_people {
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: flex-start;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Responsive layout for smaller screens */
+    .ourTeam {
+      flex-direction: column;
+    }
+  }
+
+@media screen and (max-width: 650px) {
+    .header_content_department h1 {
+        font-size: 48px;
+        line-height: 60px;
+    }
+
+    .header_content_department p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .header_department__input input,
+    .header_department__input button {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .header_department h1 {
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    .header_department p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    
+    .header_content_department h1 {
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    .header_content_department p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .header_department_input button {
+        font-size: 12px;
+        line-height: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+
+    .boxes{
+        flex-direction: column;
+        gap: 50px;
+      }
+  }
