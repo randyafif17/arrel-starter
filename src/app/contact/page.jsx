@@ -19,30 +19,30 @@ const ContactPage = () => {
   return (
     <div>
       <div className={styles.title}>
-        <h1>Let's connect and get to know each other.</h1>
+        <h1>Let&apos;s connect and get to know each other.</h1>
       </div>
       <div className={styles.text}>
         <h5>Want to meet in person?</h5>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et cumque recusandae totam ratione magnam voluptate sequi! Earum exercitationem nesciunt nostrum, sed consequuntur temporibus corrupti repellat laboriosam voluptates quo non aperiam!</p>
       </div>
-    <div className={styles.container}>
-      <div className={styles.formContainer}>
-        {/* <HydrationTestNoSSR/> */}
-        {/* <div suppressHydrationWarning>{a}</div> */}
-        <form action="" className={styles.form}>
-          <input type="text" placeholder="Name and Surname" />
-          <input type="text" placeholder="Email Address" />
-          <input type="text" placeholder="Phone Number (Optional)" />
-          <textarea
-            name=""
-            id=""
-            cols="30"
-            rows="10"
-            placeholder="Message"
-          ></textarea>
-          <button>Send</button>
-        </form>
-      </div>
+      <div className={styles.container}>
+        <div className={styles.formContainer}>
+          {/* <HydrationTestNoSSR/> */}
+          {/* <div suppressHydrationWarning>{a}</div> */}
+          <form action="" className={styles.form}>
+            <input type="text" placeholder="Name and Surname" />
+            <input type="text" placeholder="Email Address" />
+            <input type="text" placeholder="Phone Number (Optional)" />
+            <textarea
+              name=""
+              id=""
+              cols="30"
+              rows="10"
+              placeholder="Message"
+            ></textarea>
+            <button>Send</button>
+          </form>
+        </div>
         <div className={styles.imgContainer}>
           <Image src="/contact.png" alt="" fill className={styles.img} />
         </div>
