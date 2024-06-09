@@ -1,0 +1,49 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}  
+
+.wrapper{
+    width: 500px;
+    background-color: white;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    border-radius: 5px;
+    border-width: solid;
+    border-color: black;
+}
+
+.wrapper button{
+    padding: 16px 40px;
+    background-color: black;
+    color: white;
+    font-weight: medium;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: var(--font-family);
+    transition-duration: 0.4s;
+}
+
+.wrapper button:hover {
+    background-color: white;
+    color: black;
+}
+
+.wrapper span {
+    margin-left: 10px;
+}
+
+.text {
+    text-align: start;
+    font-family: var(--font-subtitle);
+}
+
+.text p {
+    color: rgb(82, 82, 82);
+    font-size: 15px;
+}

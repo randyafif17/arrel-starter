@@ -1,7 +1,6 @@
 import mongoose from "mongoose";
-const { Schema } = mongoose;
 
-const userSchema = new Schema(
+const userSchema = new mongoose.Schema(
   {
     username: {
       type: String,
@@ -30,7 +29,7 @@ const userSchema = new Schema(
   { timestamps: true }
 );
 
-const postSchema = new Schema(
+const postSchema = new mongoose.Schema(
   {
     title: {
       type: String,

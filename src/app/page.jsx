@@ -6,7 +6,7 @@ const Home = () => {
     <div className={styles.container}>
       <div className={styles.textContainer}>
         <h1 className={styles.title}>
-          Financial Consulting Agency
+          Business Consultant Agency
         </h1>
         <p className={styles.desc}>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque amet, enim sapiente, ab sequi aliquid excepturi unde a non eligendi facere vitae soluta repellendus neque. Obcaecati enim nobis voluptatibus voluptatum!
@@ -20,7 +20,7 @@ const Home = () => {
         </div>
       </div>
       <div className={styles.imgContainer}>
-        <Image src="/hero.gif" alt="" fill className={styles.heroImg} />
+        <Image src="/home.png" alt="" fill className={styles.heroImg} />
       </div>
     </div>
   )

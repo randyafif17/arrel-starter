@@ -8,6 +8,11 @@ const stats = [
   { name: 'Paid time off', value: 'Unlimited' },
 ]
 
+export const metadata = {
+  title: 'About Us',
+  description: 'About Us Page',
+}
+
 const AboutPage = () => {
   return (
     <div>
@@ -35,13 +40,13 @@ const AboutPage = () => {
         <h1>Our Team!</h1>
         <ul className={styles.people}>
           <li className={styles.person}>
-            <a href="https://www.linkedin.com/in/alison-rudolph-bb" target="_blank">
+            <a href="https://www.linkedin.com/in/randy-afif-herlambang" target="_blank">
               {/* <span className="fake arrow"></span> */}
               <h3 className={styles.person_heading} >
-                <h5>Alison Rudolph</h5>
+                <h5>Randy Afif Herlambang</h5>
               </h3>
               <div className={styles.person_meta}>
-                <span className={styles.faded}>@alisonrudolph</span>
+                <span className={styles.faded}>@randyafif</span>
                 <span className={styles.arrow}></span>
               </div>
               {/* <div className={styles.jabatan}>
@@ -53,10 +58,10 @@ const AboutPage = () => {
             <a href="https://www.linkedin.com/in/alison-rudolph-bb" target="_blank">
               {/* <span className="fake arrow"></span> */}
               <h3 className={styles.person_heading} >
-                <h5>Alison Rudolph</h5>
+                <h5>M. Farrel Wiryawan</h5>
               </h3>
               <div className={styles.person_meta}>
-                <span className={styles.faded}>@alisonrudolph</span>
+                <span className={styles.faded}>@farrelwiryawan</span>
                 <span className={styles.arrow}></span>
               </div>
             </a>

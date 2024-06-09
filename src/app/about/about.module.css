@@ -177,8 +177,16 @@
     vertical-align: baseline;
 }
 
+@media screen and (max-width: 1280px) {
+    .myTeam, .myTeam ul {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+    }
+}
+
 @media screen and (max-width: 1050px) {
-    .header_department {
+    .header_department, .people {
         flex-direction: column;
     }
 
@@ -244,6 +252,15 @@
     .header_department_input button {
         font-size: 12px;
         line-height: 16px;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .person h3 {
+        font-size: 34px;
+    }
+    .faded {
+        font-size: small;
     }
 }
 

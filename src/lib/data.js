@@ -1,6 +1,6 @@
 import { Post, User } from "./models";
-import { connectToDb } from "./utils";
-import { unstable_noStore as noStore } from "next/cache";
+import connectToDb from "@/lib/utils";
+// import { unstable_noStore as noStore } from "next/cache";
 
 // TEMPORARY DATA
 // const users = [
@@ -17,7 +17,7 @@ import { unstable_noStore as noStore } from "next/cache";
 
 export const getPosts = async () => {
   try {
-    connectToDb();
+    await connectToDb();
     const posts = await Post.find();
     return posts;
   } catch (err) {
@@ -27,8 +27,9 @@ export const getPosts = async () => {
 };
 
 export const getPost = async (slug) => {
+  console.log(getPost)
   try {
-    connectToDb();
+    await connectToDb();
     const post = await Post.findOne({ slug });
     return post;
   } catch (err) {
@@ -38,7 +39,6 @@ export const getPost = async (slug) => {
 };
 
 export const getUser = async (id) => {
-  noStore();
   try {
     connectToDb();
     const user = await User.findById(id);
@@ -51,7 +51,7 @@ export const getUser = async (id) => {
 
 export const getUsers = async () => {
   try {
-    connectToDb();
+    await connectToDb();
     const users = await User.find();
     return users;
   } catch (err) {

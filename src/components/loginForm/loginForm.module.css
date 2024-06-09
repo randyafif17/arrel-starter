@@ -1,0 +1,48 @@
+.formLine {
+    background: transparent;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: black;
+    gap: 30px;
+    border-width: solid;
+    border-color: black;
+}
+
+.form input {
+    padding: 20px;
+    background-color: rgb(245, 245, 245);
+    border-radius: 5px;
+    border-width: 1px;
+    color: var(--text);
+    border-color: black;
+    font-size: 13px;
+    font-family: var(--font-family);
+}
+
+.form button {
+    padding: 20px;
+    background-color: transparent;
+    color: black;
+    font-weight: medium;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: var(--font-family);
+    transition-duration: 0.4s;
+}
+  
+  .form button:hover {
+    background-color: black;
+    color: white;
+  }
+
+.Link {
+    color: black;
+}

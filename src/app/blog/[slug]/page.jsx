@@ -7,7 +7,6 @@ import { getPost } from "@/lib/data";
 // FETCH DATA WITH AN API
 const getData = async (slug) => {
   const res = await fetch(`http://localhost:3000/api/blog/${slug}`);
-  console.log(res);
 
   if (!res.ok) {
     throw new Error("Something went wrong");
@@ -35,6 +34,15 @@ const SinglePostPage = async ({ params }) => {
 
   // FETCH DATA WITHOUT AN API
   // const post = await getPost(slug);
+  
+  // Convert the createdAt date string to a Date object
+  const date = new Date(post.createdAt);
+  // Format the date to "MMM DD YYYY"
+  const formattedDate = date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+  });
 
   return (
     <div className={styles.container}>
@@ -54,7 +62,7 @@ const SinglePostPage = async ({ params }) => {
           <div className={styles.detailText}>
             <span className={styles.detailTitle}>Published</span>
             <span className={styles.detailValue}>
-              {post.createdAt.toString().slice(4, 16)}
+              {formattedDate}
             </span>
           </div>
         </div>

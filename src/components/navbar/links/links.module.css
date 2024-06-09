@@ -10,6 +10,23 @@
     font-weight: bold;
 }
 
+.logout {
+    padding: 13px;
+    background-color: transparent;
+    color: black;
+    font-weight: medium;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: var(--font-family);
+    transition-duration: 0.4s;
+  }
+
+.logout:hover {
+    background-color: black;
+    color: white;
+}
+
 .menuButton,
 .mobileLinks {
     display: none;

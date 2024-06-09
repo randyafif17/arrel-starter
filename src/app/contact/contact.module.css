@@ -46,12 +46,13 @@
 .form input,
 .form textarea {
   padding: 20px;
-  border-radius: 5px;
-  border: none;
-  outline: none;
-  background-color: rgb(231, 231, 231);
-  color: var(--text);
-  font-family: var(--font-family);
+    background-color: rgb(245, 245, 245);
+    border-radius: 5px;
+    border-width: 1px;
+    color: var(--text);
+    border-color: black;
+    font-size: 13px;
+    font-family: var(--font-family);
 }
 
 .form button {

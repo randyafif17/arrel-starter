@@ -1,56 +1,50 @@
 import PostCard from "@/components/postCard/postCard";
 import styles from "./blog.module.css";
-// import connectToDb from "@/lib/utils";
-// import { getPosts } from "@/lib/data";
 
-// FETCH DATA WITH AN API
-// const getData = async () => {
-//   const res = await fetch(`http://localhost:3000/api/blog`);
-//   console.log(res)
-//   if (!res.ok) {
-//     throw new Error("Something went wrong");
-//   } 
-
-//   return res.json();
-// };
-
-async function getData() {
+const getData = async () => {
   try {
-    const res = await fetch("http://localhost:3000/blog");
-    console.log(res)
+    const res = await fetch("http://localhost:3000/api/blog", {
+      next: { revalidate: 10 },
+    });
+
     if (!res.ok) {
-      throw new Error(`Server responded with status: ${res.status}`);
+      let errorMessage = `Error: ${res.status} ${res.statusText}`;
+      try {
+        const errorBody = await res.json();
+        errorMessage += ` - ${errorBody.message || 'No additional error message provided'}`;
+      } catch (e) {
+        errorMessage += ' - Failed to parse error body as JSON';
+      }
+      throw new Error(errorMessage);
     }
+
     return await res.json();
   } catch (error) {
     console.error("Error fetching data:", error);
-    // Display a user-friendly message based on the error type, e.g.,
-    // "Failed to load blog posts. Please try again later."
-    return null; // Or handle error differently
+    throw error;
   }
-}
+};
 
 const BlogPage = async () => {
+  try {
+    const posts = await getData();
 
-  // FETCH DATA WITH AN API
-  const posts = await getData();
+    if (!posts || posts.length === 0) {
+      return <div className={styles.error}>No blog posts found.</div>;
+    }
 
-  if (!posts) {
-    // Display a message indicating the error, e.g., "Failed to load blog posts."
-    return <div>Error fetching data. Please try again later.</div>;
+    return (
+      <div className={styles.container}>
+        {posts.map((post) => (
+          <div className={styles.post} key={post._id}> {/* Use post._id as the key */}
+            <PostCard post={post} />
+          </div>
+        ))}
+      </div>
+    );
+  } catch (error) {
+    return <div className={styles.error}>Error: {error.message}</div>;
   }
-  // FETCH DATA WITHOUT AN API
-  // const posts = await getPosts();
-
-  return (
-    <div className={styles.container}>
-      {posts.map((post) => (
-        <div className={styles.post} key={post.id}>
-          <PostCard post={post} />
-        </div>
-      ))}
-    </div>
-  );
 };
 
 export default BlogPage;
