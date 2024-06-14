@@ -1,7 +1,7 @@
 "use server"
 
 import { revalidatePath } from "next/cache";
-import connectToDb from "./utils";
+import connectToDb from "@/lib/utils";
 import { Post, User} from "@/lib/models";
 import { signIn, signOut } from "./auth";
 import bcrypt from "bcryptjs";
@@ -48,7 +48,7 @@ export const handleGithubLogin = async () => {
     "use server"
 
     await signIn("github")
-  }
+}
 
 export const handleLogout = async () => {
     "use server"

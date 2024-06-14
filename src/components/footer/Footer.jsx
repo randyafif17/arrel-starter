@@ -5,7 +5,7 @@
 // }
 
 // export default Footer
-import Image from "next/image";
+// import Image from "next/image";
 import styles from './footer.module.css';
 
 
@@ -14,7 +14,8 @@ const Footer = () => (
 {/* section__padding */}
     <div className={styles.footer_heading}>
     {/* "himatera__footer-heading" */}
-      <h1 className="gradient__text">Empowering innovation through the fusion of technology and intelligence.</h1>
+      <h1>Predicting rain doesn&apos;t count, building arks does.</h1>
+      <p>- Warren Buffett</p>
     </div>
 
     {/* <div className="himatera__footer-btn">
