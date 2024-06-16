@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import Image from "next/image";
 import styles from "./about.module.css"
 
 const stats = [
@@ -26,7 +26,7 @@ const AboutPage = () => {
             <br /><br />
             Our mission is simple: to empower businesses and individuals with the tools and knowledge they need to succeed. Whether you are a startup looking to find your footing or an established company seeking to innovate, we are here to help you every step of the way.
             <br /><br />
-            Join us on this journey, and let's build a brighter future together.
+            Join us on this journey, and let&apos;s build a brighter future together.
           </p>
     
           <div className={styles.header_content_people}>
