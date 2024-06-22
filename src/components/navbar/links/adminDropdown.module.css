@@ -1,0 +1,46 @@
+/* links/adminDropdown.module.css */
+
+.dropdownContainer {
+    position: relative;
+    display: inline-block;
+    
+}
+
+.dropdownButton {
+    background-color: transparent; /* Green */
+    color: black;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdownButton span {
+    padding-right: 5px;
+}
+
+.dropdownButton:hover {
+    border-bottom: 0.2rem solid #000;
+    transition-duration: 0.1s;
+
+}
+
+.dropdownContent {
+    display: block;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.link {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.link:hover {
+    background-color: #ddd;
+}

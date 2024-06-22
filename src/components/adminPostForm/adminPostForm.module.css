@@ -7,11 +7,12 @@
   .container input,
   .container textarea,
   .container select {
-    padding: 20px;
-    background-color: var(--bgSoft);
-    border: none;
+    padding: 18px;
+    background-color: transparent;
+    color: black;
     border-radius: 5px;
-    color: var(--textColor);
+    border-width: solid;
+    border-color: black;
   }
   
   .container button {

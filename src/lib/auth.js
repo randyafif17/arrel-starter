@@ -1,14 +1,14 @@
 import NextAuth from "next-auth";
 import GitHub from "next-auth/providers/github";
 import CredentialsProvider from "next-auth/providers/credentials";
-import connectToDb from "./utils";
+import connectToDb from "@/lib/utils";
 import { User } from "./models";
 import bcrypt from "bcryptjs";
 import { authConfig } from "./auth.config";
 
 const login = async (credentials) => {
   try {
-    await connectToDb();
+    connectToDb();
     const user = await User.findOne({ username: credentials.username });
 
     if (!user) throw new Error("Wrong credentials!");
